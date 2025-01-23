@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fuego Clicker</title>
+        <link rel="stylesheet" href="styles/estilos.css">
+        <script src="juego.js" defer></script>
+    </head>
+    <body>
+        <div class="contenedor-principal">
+            <!-- Contenedor de los botones -->
+            <div class="barra-lateral">
+                <h2>Armas de fuego</h2>
+                <div class="botones">
+                    <button onclick="juego.adquirirProducto(0);">Flechas de fuego (100)</button>
+                    <button onclick="juego.adquirirProducto(1);">Cohetes goblin (200)</button>
+                    <button onclick="juego.adquirirProducto(2);">Catapultas (400)</button>
+                    <!-- Aquí puedes añadir los 10 productos más en el futuro -->
+                </div>
+            </div>
+    
+            <!-- Contenedor del juego principal -->
+            <div class="contenedor">
+                <h1 id="contador">0</h1>
+                <img src="img/Teldrassil_Burning.png" onclick="juego.hacerClicEnArbol();" class="arbol-img" />
+                <div id="inventario" class="inventario"></div>
+            </div>
+        </div>
+    </body>
+    

@@ -1,0 +1,61 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Contenedor principal */
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    padding: 20px;
+}
+
+/* Texto principal */
+.texto {
+    max-width: 66.67%; /* Ahora ocupa 2/3 del ancho original */
+}
+
+.texto p {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    margin-bottom: 100px;
+    opacity: 0; /* Comienza invisible */
+    animation: fadeIn 7s ease-in-out forwards; /* Aplica animación de fade-in */
+}
+
+/* Botón de acceder */
+.boton-acceder {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: black;
+    background-color: orange;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.boton-acceder:hover {
+    background-color: darkorange;
+    transform: scale(1.1);
+}
+
+/* Animación de fade-in */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}

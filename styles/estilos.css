@@ -1,0 +1,82 @@
+/* Estilos generales para el body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor principal que incluye barra lateral y el juego */
+.contenedor-principal {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background-color: #000000;
+}
+
+/* Barra lateral para los botones */
+.barra-lateral {
+    width: 250px;
+    background: linear-gradient(135deg, #ff7b38, #ff6f61);
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow-y: auto; /* Habilitar scroll si añades más productos */
+}
+
+.barra-lateral h2 {
+    margin: 0 0 20px 0;
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+/* Estilo de los botones en la barra lateral */
+.barra-lateral .botones button {
+    background-color: #ff7b38;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%; /* Ocupan todo el ancho de la barra */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.barra-lateral .botones button:hover {
+    background-color: #e65f00;
+    transform: scale(1.05);
+}
+
+/* Contenedor del juego */
+.contenedor {
+    flex: 1;
+    text-align: center;
+    background: linear-gradient(135deg, #f2a900, #ff6f61);
+    border-radius: 15px;
+    padding: 40px;
+    margin: auto;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Imagen del árbol */
+.arbol-img {
+    width: 600px;
+    height: auto;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.arbol-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+}
