@@ -1,15 +1,13 @@
 var fuego = 0;
 
-var inventario = [0, 0, 0]; // Cuantos flechas en llamas, chamanes de fuego y catapultas tenemos
-var produccionFuego = [1, 5, 15]; // Cuantos fuegos produce cada uno
-var costoProducto = [100, 200, 400]; // Cuanto cuesta cada uno
+var inventario = [0, 0, 0];
+var produccionFuego = [1, 5, 15];
+var costoProducto = [100, 200, 400];
 
-// Función para hacer clic en el árbol y ganar fuego
 function hacerClicEnArbol(){
     fuego += inventario[0] > 0 ? inventario[0] : 1;
 }
 
-// Comprar armas de fuego
 function adquirirPArma(producto){
     if (fuego >= costoProducto[producto]){
         inventario[producto]++;
@@ -20,14 +18,12 @@ function adquirirPArma(producto){
     }
 }
 
-// Calcular cuántos fuego se producen por segundo
 function generarFuego(){
     for (let i = 0; i < inventario.length; i++){
         fuego += inventario[i] * produccionFuego[i];
     }
 }
 
-// Actualizar la pantalla para ver el número de fuego y el inventario
 function actualizarPantalla(){
     document.getElementById("contador").innerHTML = fuego;
     document.getElementById("inventario").innerHTML =
